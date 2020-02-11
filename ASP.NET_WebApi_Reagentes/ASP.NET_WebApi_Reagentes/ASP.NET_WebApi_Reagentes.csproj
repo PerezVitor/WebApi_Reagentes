@@ -168,6 +168,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Emprestimo.cs" />
+    <Compile Include="Models\EstoqueContext.cs" />
     <Compile Include="Models\Reagentes.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
