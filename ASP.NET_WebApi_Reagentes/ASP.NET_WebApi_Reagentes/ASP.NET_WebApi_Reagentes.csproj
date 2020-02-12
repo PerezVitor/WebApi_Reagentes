@@ -235,10 +235,14 @@
     <Content Include="Views\Login\Registrar.cshtml" />
     <Content Include="Views\Login\AlterarSenha.cshtml" />
     <Content Include="Views\Login\Home.cshtml" />
+    <Content Include="Views\Reagentes\Index.cshtml" />
+    <Content Include="Views\Reagentes\Details.cshtml" />
+    <Content Include="Views\Reagentes\Create.cshtml" />
+    <Content Include="Views\Reagentes\Edit.cshtml" />
+    <Content Include="Views\Reagentes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Reagentes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

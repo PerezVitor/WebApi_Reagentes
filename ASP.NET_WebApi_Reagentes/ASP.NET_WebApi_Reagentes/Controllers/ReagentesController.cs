@@ -16,7 +16,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
 
         public ReagentesController()
         {
-            client.BaseAddress = new Uri("http://localhost:49975/api/Reagentes");
+            client.BaseAddress = new Uri("http://localhost:49975/api/Reagente");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -24,20 +24,20 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         // GET: Reagentes
         public ActionResult Index()
         {
-            HttpResponseMessage response = client.GetAsync("/api/Reagentes").Result;
-            if(response.IsSuccessStatusCode)
+            HttpResponseMessage response = client.GetAsync("/api/Reagente").Result;
+            List<Reagentes> reagentes = new List<Reagentes>();
+            if (response.IsSuccessStatusCode)
             {
-                List<Reagentes> reagentes = new List<Reagentes>();
                 reagentes = response.Content.ReadAsAsync<List<Reagentes>>().Result;
                 return View(reagentes); 
             }
-            return RedirectToAction("Home", "Login");
+            return View(reagentes);
         }
 
         // GET: Reagentes/Details/5
         public ActionResult Details(int id)
         {
-            HttpResponseMessage response = client.GetAsync("/api/Reagentes").Result;
+            HttpResponseMessage response = client.GetAsync("/api/Reagente").Result;
             if(response.IsSuccessStatusCode)
             {
                 List<Reagentes> reagentes = new List<Reagentes>();
@@ -60,7 +60,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         {
             try
             {
-                HttpResponseMessage response = client.PostAsJsonAsync("/api/Reagentes", reagente).Result;
+                HttpResponseMessage response = client.PostAsJsonAsync("/api/Reagente", reagente).Result;
                 if(response.StatusCode == HttpStatusCode.Created)
                 {
                     return RedirectToAction("Index");
@@ -77,7 +77,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         // GET: Reagentes/Edit/5
         public ActionResult Edit(int id)
         {
-            HttpResponseMessage response = client.GetAsync("/api/Reagentes").Result;
+            HttpResponseMessage response = client.GetAsync("/api/Reagente").Result;
             if(response.IsSuccessStatusCode)
             {
                 List<Reagentes> reagentes = new List<Reagentes>();
@@ -94,7 +94,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         {
             try
             {
-                HttpResponseMessage response = client.PutAsJsonAsync($"/api/Reagentes/{id}", reagente).Result;
+                HttpResponseMessage response = client.PutAsJsonAsync($"/api/Reagente/{id}", reagente).Result;
                 if(response.StatusCode == HttpStatusCode.NoContent)
                 {
                     return RedirectToAction("Index");
@@ -110,7 +110,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         // GET: Reagentes/Delete/5
         public ActionResult Delete(int id)
         {
-            HttpResponseMessage response = client.GetAsync("/api/Reagentes").Result;
+            HttpResponseMessage response = client.GetAsync("/api/Reagente").Result;
             if (response.IsSuccessStatusCode)
             {
                 List<Reagentes> reagentes = new List<Reagentes>();
@@ -127,7 +127,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         {
             try
             {
-                HttpResponseMessage response = client.DeleteAsync($"/api/Reagentes/{id}").Result;
+                HttpResponseMessage response = client.DeleteAsync($"/api/Reagente/{id}").Result;
                 if(response.StatusCode == HttpStatusCode.OK)
                 {
                     return RedirectToAction("Index");

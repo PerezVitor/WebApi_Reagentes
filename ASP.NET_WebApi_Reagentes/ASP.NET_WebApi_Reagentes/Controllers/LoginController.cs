@@ -59,7 +59,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
 
         public ActionResult Reagentes()
         {
-            return RedirectToAction("Index", "Usuarios");
+            return RedirectToAction("Index", "Reagentes");
         }
 
         public ActionResult Emprestimos()

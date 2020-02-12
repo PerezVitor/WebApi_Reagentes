@@ -1,0 +1,74 @@
+﻿@model ASP.NET_WebApi_Reagentes.Models.Reagentes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reagentes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoInterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoInterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadePeso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadePeso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnidadeMedida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnidadeMedida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacoes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
