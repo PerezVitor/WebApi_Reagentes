@@ -1,0 +1,14 @@
+﻿@model ASP.NET_WebApi_Reagentes.Models.Usuario
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Seja Bem-Vindo</h2>
+
+<div class="form-group">
+    @Html.ActionLink("Usuarios", "Usuarios", "Login", new { @class = "btn btn-primary"})
+    @Html.ActionLink("Reagentes", "", "", new { @class = "btn btn-primary"})
+    @Html.ActionLink("Emprestimos", "", "", new { @class = "btn btn-primary"})
+</div>
+

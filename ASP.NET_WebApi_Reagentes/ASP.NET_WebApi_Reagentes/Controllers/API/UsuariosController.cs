@@ -45,7 +45,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers.API
 
         // POST: api/Usuarios
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult Post(Usuario usuario)
+        public IHttpActionResult Post([FromBody] Usuario usuario)
         {
             if(!ModelState.IsValid)
             {
