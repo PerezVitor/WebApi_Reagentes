@@ -63,6 +63,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers.API
             }
 
             db.Emprestimos.Add(emprestimo);
+            db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = emprestimo.Id }, emprestimo);
         }

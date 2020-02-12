@@ -165,6 +165,7 @@
     <Compile Include="Controllers\API\EmprestimoController.cs" />
     <Compile Include="Controllers\API\ReagenteController.cs" />
     <Compile Include="Controllers\API\UsuariosController.cs" />
+    <Compile Include="Controllers\EmprestimosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ReagentesController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -240,6 +241,11 @@
     <Content Include="Views\Reagentes\Create.cshtml" />
     <Content Include="Views\Reagentes\Edit.cshtml" />
     <Content Include="Views\Reagentes\Delete.cshtml" />
+    <Content Include="Views\Emprestimos\Index.cshtml" />
+    <Content Include="Views\Emprestimos\Create.cshtml" />
+    <Content Include="Views\Emprestimos\Details.cshtml" />
+    <Content Include="Views\Emprestimos\Edit.cshtml" />
+    <Content Include="Views\Emprestimos\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

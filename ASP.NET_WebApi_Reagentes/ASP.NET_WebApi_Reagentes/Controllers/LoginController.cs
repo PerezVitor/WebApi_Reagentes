@@ -64,7 +64,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
 
         public ActionResult Emprestimos()
         {
-            return RedirectToAction("Index", "Usuarios");
+            return RedirectToAction("Index", "Emprestimos");
         }
 
         public ActionResult Logout()
@@ -95,16 +95,14 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         //GET
         public ActionResult AlterarSenha()
         {
-            HttpResponseMessage response = client.GetAsync("/api/Usuarios").Result;
-            List<Usuario> usuarios = new List<Usuario>();
-            usuarios = response.Content.ReadAsAsync<List<Usuario>>().Result;
-            Usuario usuario = usuarios.Where(u => u.Id == int.Parse(Session["Id_Usuario"].ToString())).FirstOrDefault();
-            
+            HttpResponseMessage response = client.GetAsync($"/api/Usuarios/{Session["Id_Usuario"].ToString()}").Result;
+            Usuario usuario = response.Content.ReadAsAsync<Usuario>().Result;
+
             if(usuario != null)
             {
                 return View(usuario);
             }
-            return View();
+            return View(response.RequestMessage);
         }
 
         //PUT

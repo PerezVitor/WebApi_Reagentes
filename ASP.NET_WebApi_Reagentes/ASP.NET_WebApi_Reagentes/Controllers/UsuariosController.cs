@@ -128,7 +128,7 @@ namespace ASP.NET_WebApi_Reagentes.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             HttpResponseMessage response = client.DeleteAsync($"/api/Usuarios/{id}").Result;
-            if(response.StatusCode == HttpStatusCode.NoContent)
+            if(response.StatusCode == HttpStatusCode.OK)
             {
                 return RedirectToAction("Index");
             }

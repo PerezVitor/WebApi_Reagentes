@@ -1,0 +1,50 @@
+﻿@model ASP.NET_WebApi_Reagentes.Models.Emprestimo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Emprestimo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Reagente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Reagente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QntPesoEmprestado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QntPesoEmprestado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataEmprestimo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataEmprestimo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
